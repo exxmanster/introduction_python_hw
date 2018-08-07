@@ -8,6 +8,6 @@ import math
 
 a = 4
 b = 8
-ab_result = (pow(a, 2) + pow(b, 2))%2
+result = (pow(a, 2) + pow(b, 2))%2
 
-print('TheResult of (a**2 + b**2)%2', 'for a = %.2f and b = %.2f is equel to %d' %(a, b, ab_result))
+print('TheResult of (a**2 + b**2)%2', 'for a = %.2f and b = %.2f is equel to %d' %(a, b,result))
