@@ -12,8 +12,8 @@ def have_trains_crashed(v1, v2): # returns boolean value
     t1 = s1/v1
     s2 = v2*t1
     if s2 < (d - s1):
-        return ("Trains will not crash! ") #False
+        return False
     else:
-        return ("Trains will crash! ") #True
+        return True
 
 print(have_trains_crashed(5,9))
