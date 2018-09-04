@@ -1,23 +1,13 @@
 import math
-def degrees2radians(degrees):
-    radian = int(degrees) * (math.pi/180)
-    return radian
 
-
-
-
-import math
-
-def circles_intersect(x1, y1, r1, x2, y2, r2): # returns boolean value
-    d = math.sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2))
-    #No Intersection
-    if d > abs(r1 + r2) or d < abs(r1 - r2):
-        return False
+def solve_quadratic_equation(a, b, c): # returns 2 values: either 2 roots, 1 root and None or 2 Nones
+    d = pow(b, 2) - 4*a*c
+    if d > 0:
+        return (-b + math.sqrt(d))/2/a, (-b - math.sqrt(d))/2/a
     else:
-        return True
-    # 1 point
-    #d == abs(r1 + r2) or d == abs(r1 - r2)
-    #2 points
-    #d < abs(r1 + r2) or d > abs(r1 - r2)
+        if d == 0:
+            return -b/2/a, None
+        else:
+            return None, None
 
-print(circles_intersect(2,2,5,2,2,2))
+print(solve_quadratic_equation(5, 10, 0))
