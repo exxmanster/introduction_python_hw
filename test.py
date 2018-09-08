@@ -11,3 +11,4 @@ def solve_quadratic_equation(a, b, c): # returns 2 values: either 2 roots, 1 roo
             return None, None
 
 print(solve_quadratic_equation(5, 10, 0))
+
