@@ -15,14 +15,16 @@
 import math
 
 def chess_reward(): # returns 2 ints (cell number and total number of corns)
-
     corns = 1
-    for cells in range(1, 65):
-       # print("Cells: %2d \Corns:  %25s" % (i, '{0:,}'.format(corns)))
-        while corns <= 1000000:
-                corns *= 2
-    print("Cell: %2d \tCorns:  %5s" % (cells, '{0:,}'.format(corns)))
+    cells = 1
+       #
+    while corns < 1000000:
+        corns = corns + 2**cells
+        cells += 1
+        print("Cells: %2d \Corns:  %25s" % (cells, '{0:,}'.format(corns)))
+    return cells, corns
 
 
 
-chess_reward()
+
+print(chess_reward())
